@@ -138,7 +138,11 @@ export default function AboutSection() {
         }} />
 
         {/* ── Bento Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '1rem',
+        }}>
 
           {/* Caja 1 — Perfil (col-span-2) */}
           <BentoCard className="md:col-span-2">

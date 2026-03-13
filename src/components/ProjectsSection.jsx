@@ -179,59 +179,8 @@ function ProjectCard({ project }) {
         </p>
 
         {/* Stack */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.5rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
           {project.stack.map(t => <StackBadge key={t} label={t} />)}
-        </div>
-
-        {/* Separador */}
-        <div style={{
-          height: '1px',
-          background: 'rgba(255,255,255,0.06)',
-          marginBottom: '1.25rem',
-        }} />
-
-        {/* Enlaces */}
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
-          <a
-            href={project.demo}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.8rem',
-              fontWeight: 500,
-              color: project.accent,
-              textDecoration: 'none',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              transition: 'opacity 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = '0.7')}
-            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
-          >
-            Ver Demo ↗
-          </a>
-          <a
-            href={project.code}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.8rem',
-              fontWeight: 500,
-              color: '#6b7280',
-              textDecoration: 'none',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              transition: 'color 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.color = '#d1d5db')}
-            onMouseLeave={e => (e.currentTarget.style.color = '#6b7280')}
-          >
-            Código →
-          </a>
         </div>
 
       </div>
@@ -298,7 +247,7 @@ export default function ProjectsSection() {
         {/* Grid de proyectos */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 520px), 1fr))',
           gap: '1.75rem',
         }}>
           {PROJECTS.map(p => <ProjectCard key={p.id} project={p} />)}
