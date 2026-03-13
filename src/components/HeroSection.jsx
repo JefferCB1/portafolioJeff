@@ -284,8 +284,8 @@ export default function HeroSection() {
       />
 
       {/* Text — left half, vertically centered */}
-      <div className="relative z-10 flex min-h-screen items-center px-6 md:px-16 lg:px-24">
-        <div className="md:w-[45%] lg:w-[40%]">
+      <div className="relative z-10 flex min-h-screen items-center px-8 md:px-20 lg:px-32">
+        <div className="md:w-[42%] lg:w-[38%] pl-2 md:pl-4">
 
           {/* Línea 1 — saludo ligero */}
           <p
