@@ -261,9 +261,9 @@ export default function HeroSection() {
       <AuroraBackground />
 
       {/* 3D canvas — right half, desktop */}
-      <div className="absolute top-1/2 right-10 md:right-20 -translate-y-1/2 w-1/2 h-3/4 z-0 hidden md:block">
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[58%] h-full z-0 hidden md:block">
         <Canvas
-          camera={{ position: [0, 0, 6.5], fov: 46 }}
+          camera={{ position: [0, 0, 5.2], fov: 52 }}
           gl={{ antialias: true, alpha: true }}
         >
           <MouseTracker />
@@ -279,7 +279,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-[1] pointer-events-none hidden md:block"
         style={{
           background:
-            'linear-gradient(to right, rgba(5,5,5,0.92) 28%, rgba(5,5,5,0.6) 48%, rgba(5,5,5,0.05) 70%, transparent 100%)',
+            'linear-gradient(to right, rgba(5,5,5,0.95) 30%, rgba(5,5,5,0.55) 46%, rgba(5,5,5,0.04) 65%, transparent 100%)',
         }}
       />
 
@@ -391,9 +391,9 @@ export default function HeroSection() {
       `}</style>
 
       {/* Mobile: canvas below text */}
-      <div className="relative z-0 md:hidden w-full" style={{ height: '65vw' }}>
+      <div className="relative z-0 md:hidden w-full" style={{ height: '85vw' }}>
         <Canvas
-          camera={{ position: [0, 0, 7.2], fov: 52 }}
+          camera={{ position: [0, 0, 5.8], fov: 56 }}
           gl={{ antialias: true, alpha: true }}
         >
           <SceneLights />

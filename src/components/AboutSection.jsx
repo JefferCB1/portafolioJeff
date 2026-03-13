@@ -141,7 +141,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
 
           {/* Caja 1 — Perfil (col-span-2) */}
-          <BentoCard style={{ gridColumn: 'span 1' }} className="md:col-span-2">
+          <BentoCard className="md:col-span-2">
             <div style={{ display: 'flex', gap: '1.75rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
               <Avatar />
               <div style={{ flex: 1, minWidth: '140px' }}>
