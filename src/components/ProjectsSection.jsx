@@ -95,7 +95,7 @@ function ProjectCard({ project }) {
     >
       {/* Imagen / Mockup placeholder */}
       <div style={{
-        height: '16rem',
+        height: 'clamp(9rem, 18vw, 16rem)',
         background: project.gradient,
         position: 'relative',
         display: 'flex',
@@ -112,7 +112,7 @@ function ProjectCard({ project }) {
 
         {/* Icono central grande */}
         <span style={{
-          fontSize: '5rem',
+          fontSize: 'clamp(3rem, 6vw, 5rem)',
           color: project.accent,
           opacity: hovered ? 0.9 : 0.5,
           transition: 'opacity 0.3s, transform 0.3s',
@@ -247,7 +247,7 @@ export default function ProjectsSection() {
       style={{
         backgroundColor: 'transparent',
         minHeight: '100vh',
-        padding: '6rem 2.5rem',
+        padding: 'clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2.5rem)',
         fontFamily: "'Inter', sans-serif",
       }}
     >
@@ -298,7 +298,7 @@ export default function ProjectsSection() {
         {/* Grid de proyectos */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 520px), 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
           gap: '1.75rem',
         }}>
           {PROJECTS.map(p => <ProjectCard key={p.id} project={p} />)}

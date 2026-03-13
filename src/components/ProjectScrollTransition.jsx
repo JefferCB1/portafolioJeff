@@ -48,7 +48,7 @@ export default function ProjectScrollTransition() {
             className="font-black tracking-tighter"
             style={{
               fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(4rem, 12vw, 9rem)',
+              fontSize: 'clamp(2rem, 10vw, 9rem)',
               lineHeight: 1,
             }}
           >

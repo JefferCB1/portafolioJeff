@@ -108,7 +108,7 @@ export default function ContactSection() {
       style={{
         backgroundColor: 'transparent',
         minHeight: '100vh',
-        padding: '6rem 2.5rem',
+        padding: 'clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2.5rem)',
         position: 'relative',
         fontFamily: "'Inter', sans-serif",
         overflow: 'hidden',
@@ -119,7 +119,7 @@ export default function ContactSection() {
         position: 'absolute',
         top: '30%', left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '600px', height: '400px',
+        width: 'min(600px, 90vw)', height: 'min(400px, 50vw)',
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(251,151,63,0.12) 0%, transparent 70%)',
         filter: 'blur(80px)',

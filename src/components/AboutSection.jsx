@@ -30,7 +30,7 @@ function Avatar() {
     return (
       <div
         style={{
-          width: '7rem', height: '7rem',
+          width: 'clamp(4.5rem, 10vw, 7rem)', height: 'clamp(4.5rem, 10vw, 7rem)',
           borderRadius: '50%',
           border: '2px solid #fb973f',
           background: 'linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%)',
@@ -49,7 +49,7 @@ function Avatar() {
       alt="Jefferson"
       onError={() => setBroken(true)}
       style={{
-        width: '7rem', height: '7rem',
+        width: 'clamp(4.5rem, 10vw, 7rem)', height: 'clamp(4.5rem, 10vw, 7rem)',
         borderRadius: '50%',
         border: '2px solid #fb973f',
         objectFit: 'cover',
@@ -100,7 +100,7 @@ export default function AboutSection() {
       style={{
         backgroundColor: 'transparent',
         minHeight: '100vh',
-        padding: '6rem 2.5rem',
+        padding: 'clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2.5rem)',
         fontFamily: "'Inter', sans-serif",
       }}
     >
@@ -138,18 +138,13 @@ export default function AboutSection() {
         }} />
 
         {/* ── Bento Grid ── */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gridAutoRows: 'auto',
-          gap: '1.25rem',
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
 
           {/* Caja 1 — Perfil (col-span-2) */}
-          <BentoCard style={{ gridColumn: 'span 2' }}>
+          <BentoCard style={{ gridColumn: 'span 1' }} className="md:col-span-2">
             <div style={{ display: 'flex', gap: '1.75rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
               <Avatar />
-              <div style={{ flex: 1, minWidth: '200px' }}>
+              <div style={{ flex: 1, minWidth: '140px' }}>
                 <h3 style={{
                   fontFamily: "'Syne', sans-serif",
                   fontSize: '1.4rem',
@@ -208,7 +203,7 @@ export default function AboutSection() {
           </BentoCard>
 
           {/* Caja 3 — Automatización & IA (row-span-2) */}
-          <BentoCard style={{ gridRow: 'span 2' }}>
+          <BentoCard className="md:row-span-2">
             <div style={{
               width: '2.2rem', height: '2.2rem',
               borderRadius: '8px',
@@ -257,7 +252,7 @@ export default function AboutSection() {
           </BentoCard>
 
           {/* Caja 4 — Backend & Datos (col-span-2) */}
-          <BentoCard style={{ gridColumn: 'span 2' }}>
+          <BentoCard className="md:col-span-2">
             <div style={{
               width: '2.2rem', height: '2.2rem',
               borderRadius: '8px',

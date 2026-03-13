@@ -76,7 +76,7 @@ function AuroraBackground() {
         <div
           className="absolute rounded-full"
           style={{
-            width: '500px', height: '500px',
+            width: 'min(500px, 80vw)', height: 'min(500px, 80vw)',
             left: `${pos.x}%`, top: `${pos.y}%`,
             transform: 'translate(-50%, -50%)',
             background: 'radial-gradient(circle, rgba(7,64,139,0.22) 0%, transparent 65%)',
@@ -418,7 +418,7 @@ export default function HeroSection() {
             curveAmount={60}
             direction="left"
             interactive
-            className="opacity-50 font-bold tracking-widest text-[1.8rem]"
+            className="opacity-50 font-bold tracking-widest text-[1rem] md:text-[1.8rem]"
           />
         </div>
       </div>
